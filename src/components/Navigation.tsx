@@ -31,7 +31,10 @@ export default function Navigation() {
           : 'bg-transparent'
       }`}
     >
-      <div className={`text-xl font-bold tracking-tighter transition-colors duration-300 text-[#0F172A]`}>
+      <div 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`text-xl font-bold tracking-tighter transition-colors duration-300 text-[#0F172A] cursor-pointer hover:text-[#C2410C]`}
+      >
         SS
       </div>
       
@@ -57,13 +60,16 @@ export default function Navigation() {
         >
           <Linkedin size={20} />
         </a>
-        <a 
-          href="mailto:shrutisingh2680@gmail.com"
-          title="Send me an email"
+        <button 
+          onClick={() => {
+            navigator.clipboard.writeText('shrutisingh2680@gmail.com');
+            alert('Email copied to clipboard!');
+          }}
+          title="shrutisingh2680@gmail.com (Click to copy)"
           className={`relative z-[100] p-2 transition-all duration-300 text-[#475569] hover:text-[#C2410C] cursor-pointer flex items-center justify-center pointer-events-auto`}
         >
           <Mail size={20} />
-        </a>
+        </button>
       </div>
     </motion.nav>
   );

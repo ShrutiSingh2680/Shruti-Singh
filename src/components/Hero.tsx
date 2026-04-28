@@ -44,7 +44,7 @@ export default function Hero() {
         
         <div className="mt-12 group cursor-pointer relative z-30">
           <a 
-            href="./resume.pdf" 
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             download="Shruti_Singh_Resume.pdf"
             className="inline-flex items-center space-x-4 border-b-2 border-[#0F172A] pb-2 font-black text-xs uppercase tracking-widest text-[#0F172A] hover:text-[#C2410C] hover:border-[#C2410C] transition-all group pointer-events-auto"
           >
@@ -55,32 +55,51 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative p-16 flex flex-col justify-center items-center bg-white overflow-hidden">
-        {/* Floating Creative Element */}
+      <div className="relative p-8 md:p-16 flex flex-col justify-center items-center bg-white overflow-hidden">
+        {/* Decorative Background for Image */}
         <motion.div 
           animate={{ 
             rotate: [0, 5, -5, 0],
             scale: [1, 1.05, 0.95, 1],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute w-[120%] h-[120%] bg-[#FDE68A]/30 rounded-[30% 70% 70% 30% / 30% 30% 70% 70%] blur-3xl pointer-events-none"
+          className="absolute w-[120%] h-[120%] bg-[#FDE68A]/20 rounded-[30% 70% 70% 30% / 30% 30% 70% 70%] blur-3xl pointer-events-none"
         />
         
-        <div className="relative z-10 flex flex-col items-center">
-          <div className="max-w-sm">
-            <div className="text-[10px] uppercase font-black tracking-[0.4em] text-[#C2410C] mb-8 flex items-center justify-center">
-              <span className="w-8 h-[1px] bg-[#C2410C] mr-4" />
-              Philosophy
-              <span className="w-8 h-[1px] bg-[#C2410C] ml-4" />
-            </div>
-            <p className="font-serif text-3xl md:text-5xl italic leading-tight text-[#0F172A] text-center">
-              "Great products are not just <span className="text-[#064E3B]">built</span>; they are discovered through relentless <span className="bg-[#FDE68A] px-2 not-italic">empathy</span>."
-            </p>
-            <div className="mt-12 flex flex-col items-center">
-              <div className="w-16 h-16 border-2 border-[#0F172A] rounded-full flex items-center justify-center rotate-12 bg-white shadow-xl">
-                <span className="text-xl font-serif italic text-[#C2410C]">SS</span>
-              </div>
-            </div>
+        <div className="relative z-10 w-full max-w-sm">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, rotate: 3 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, ease: "circOut" }}
+            className="aspect-[3/4] rounded-[40px] border-2 border-[#0F172A] overflow-hidden bg-zinc-100 shadow-2xl group transition-all duration-500 hover:scale-[1.02]"
+          >
+            <img 
+              src={`${import.meta.env.BASE_URL}profile.png`} 
+              alt="Shruti Singh" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              onError={(e) => {
+                e.currentTarget.src = "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?q=80&w=1000&auto=format&fit=crop";
+              }}
+            />
+            <div className="absolute inset-0 bg-[#064E3B]/5 mix-blend-multiply pointer-events-none" />
+          </motion.div>
+          
+          {/* Floating Personal Badge */}
+          <motion.div
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="absolute -bottom-6 -right-6 bg-[#FDE68A] border-2 border-[#0F172A] px-6 py-4 rounded-3xl shadow-xl z-20 flex flex-col items-center rotate-[-5deg] hover:rotate-0 transition-transform cursor-default"
+          >
+            <span className="text-[10px] font-black uppercase tracking-widest text-[#0F172A] opacity-60">Bengaluru, IN</span>
+            <span className="text-xl font-serif italic text-[#C2410C]">Shruti Singh</span>
+          </motion.div>
+          
+          {/* Scribble indicator */}
+          <div className="absolute -top-12 -left-12 w-24 h-24 text-[#C2410C] opacity-30 pointer-events-none select-none">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+              <path d="M10 50 Q 30 10, 50 50 T 90 50" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
           </div>
         </div>
       </div>

@@ -25,18 +25,27 @@ export default function Contact() {
       <div className="p-8 md:p-16 flex flex-col justify-between bg-white relative">
         <div className="space-y-8">
           <h2 className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#475569]">Digital Footprint</h2>
-          <div className="flex flex-col space-y-4">
-            <a href="https://www.linkedin.com/in/shrutisingh2680/" target="_blank" rel="noopener noreferrer" className="font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit">
-              LinkedIn
-            </a>
-            <a 
-              href="mailto:shrutisingh2680@gmail.com" 
-              title="Send me an email"
-              className="relative z-10 font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit cursor-pointer flex items-center pointer-events-auto"
-            >
-              Email
-            </a>
-          </div>
+            <div className="flex flex-col space-y-2">
+              <a href="https://www.linkedin.com/in/shrutisingh2680/" target="_blank" rel="noopener noreferrer" className="font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit">
+                LinkedIn
+              </a>
+              <div 
+                onClick={() => {
+                  navigator.clipboard.writeText('shrutisingh2680@gmail.com');
+                  // Quick feedback could go here
+                }}
+                className="group flex flex-col cursor-pointer"
+              >
+                <a 
+                  href="mailto:shrutisingh2680@gmail.com" 
+                  title="shrutisingh2680@gmail.com"
+                  className="relative z-10 font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit pointer-events-auto"
+                >
+                  Email
+                </a>
+                <span className="text-xs font-mono text-[#64748B] opacity-0 group-hover:opacity-100 transition-opacity">shrutisingh2680@gmail.com</span>
+              </div>
+            </div>
         </div>
 
         <div className="mt-20 flex items-center justify-between border-t border-[#0f172a] pt-8">

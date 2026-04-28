@@ -107,11 +107,6 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="mt-16 text-right">
-          <div className="inline-block text-[10px] font-black uppercase tracking-widest text-zinc-300">
-            End of Skills Matrix // Vol 1.0
-          </div>
-        </div>
       </div>
     </section>
   );
