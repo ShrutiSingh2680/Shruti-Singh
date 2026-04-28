@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -20,17 +20,14 @@ import PaintingsGallery from './components/PaintingsGallery';
 
 function PortfolioHome() {
   return (
-    <>
-      <Navigation />
-      <main className="relative">
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Hobbies />
-        <Contact />
-      </main>
-    </>
+    <main className="relative">
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Hobbies />
+      <Contact />
+    </main>
   );
 }
 
@@ -46,8 +43,9 @@ export default function App() {
           <div className="absolute inset-0 bg-noise pointer-events-none opacity-50" />
           
           <Routes>
-            <Route path="/" element={<PortfolioHome />} />
+            <Route path="/" element={<><Navigation /><PortfolioHome /></>} />
             <Route path="/paintings" element={<PaintingsGallery />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </div>

@@ -33,8 +33,9 @@ export default function Hobbies() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full min-h-[400px]">
           {hobbies.map((hobby, index) => {
-            const Wrapper = hobby.link ? (hobby.isExternal ? motion.a : motion(Link)) : motion.div;
-            const extraProps = hobby.link ? (hobby.isExternal ? {
+            const isInternal = hobby.link && !hobby.isExternal;
+            const Wrapper = isInternal ? Link : (hobby.link ? "a" : "div");
+            const extraProps: any = hobby.link ? (hobby.isExternal ? {
               href: hobby.link,
               target: "_blank",
               rel: "noopener noreferrer"
@@ -43,9 +44,8 @@ export default function Hobbies() {
             }) : {};
 
             return (
-              <Wrapper
+              <motion.div
                 key={hobby.title}
-                {...extraProps}
                 initial={{ opacity: 0, scale: 0.9, rotate: index % 2 === 0 ? -2 : 2 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
@@ -53,9 +53,10 @@ export default function Hobbies() {
                 whileHover={{ scale: 1.02, zIndex: 10 }}
                 className={`group relative border border-[#FDFCFB]/10 p-8 flex flex-col justify-between overflow-hidden cursor-pointer ${hobby.color}`}
               >
+                <Wrapper {...extraProps} className="absolute inset-0 z-20" />
                 <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-20 transition-opacity bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px]" />
                 
-                <div className="text-white/40 group-hover:text-white transition-colors">
+                <div className="text-white/40 group-hover:text-white transition-colors relative z-10">
                   {hobby.icon}
                 </div>
 
@@ -73,7 +74,7 @@ export default function Hobbies() {
                     </div>
                   )}
                 </div>
-              </Wrapper>
+              </motion.div>
             );
           })}
         </div>

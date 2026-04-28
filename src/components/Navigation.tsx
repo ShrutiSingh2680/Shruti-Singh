@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Linkedin, Mail } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const { scrollY } = useScroll();
@@ -14,11 +15,11 @@ export default function Navigation() {
   }, [scrollY]);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Human', href: '#hobbies' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/#about' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Experience', href: '/#experience' },
+    { name: 'Human', href: '/#hobbies' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -31,12 +32,12 @@ export default function Navigation() {
           : 'bg-transparent'
       }`}
     >
-      <div 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      <Link 
+        to="/"
         className={`text-xl font-bold tracking-tighter transition-colors duration-300 text-[#0F172A] cursor-pointer hover:text-[#C2410C]`}
       >
         SS
-      </div>
+      </Link>
       
       <div className="hidden md:flex items-center space-x-12">
         {navItems.map((item) => (

@@ -104,6 +104,9 @@ export default function PaintingsGallery() {
                   src={art.image} 
                   alt={art.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  onError={(e) => {
+                    e.currentTarget.src = `https://images.unsplash.com/photo-${art.id === 1 ? '1541963463532-d68292c34b19' : art.id === 2 ? '1579783902614-a3fb3927b6a5' : art.id === 3 ? '1578301978693-85fa9c0320b9' : '1549490349-8643362247b5'}?auto=format&fit=crop&q=80&w=800`;
+                  }}
                 />
                 <div className="absolute inset-0 bg-[#0F172A]/5 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
