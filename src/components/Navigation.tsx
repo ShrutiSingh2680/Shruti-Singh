@@ -25,7 +25,7 @@ export default function Navigation() {
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className={`fixed top-[12px] left-[12px] right-[12px] z-[9999] flex items-center justify-between px-6 py-4 md:px-10 transition-all duration-300 rounded-xl pointer-events-auto ${
+      className={`fixed top-[24px] left-[24px] right-[24px] z-[9999] flex items-center justify-between px-6 py-4 md:px-10 transition-all duration-300 rounded-xl pointer-events-auto ${
         isScrolled 
           ? 'bg-white/80 backdrop-blur-md shadow-sm border border-zinc-200/50' 
           : 'bg-transparent'
@@ -59,7 +59,7 @@ export default function Navigation() {
         </a>
         <a 
           href="mailto:shrutisingh2680@gmail.com"
-          className={`p-2 transition-all duration-300 text-[#475569] hover:text-[#C2410C] cursor-pointer flex items-center justify-center`}
+          className={`relative z-[100] p-2 transition-all duration-300 text-[#475569] hover:text-[#C2410C] cursor-pointer flex items-center justify-center`}
         >
           <Mail size={20} />
         </a>

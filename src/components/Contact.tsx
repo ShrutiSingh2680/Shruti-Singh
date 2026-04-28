@@ -29,7 +29,10 @@ export default function Contact() {
             <a href="https://www.linkedin.com/in/shrutisingh2680/" target="_blank" rel="noopener noreferrer" className="font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit">
               LinkedIn
             </a>
-            <a href="mailto:shrutisingh2680@gmail.com" className="font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit cursor-pointer flex items-center">
+            <a 
+              href="mailto:shrutisingh2680@gmail.com" 
+              className="relative z-10 font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit cursor-pointer flex items-center"
+            >
               Email
             </a>
           </div>
