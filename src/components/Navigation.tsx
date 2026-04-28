@@ -59,7 +59,8 @@ export default function Navigation() {
         </a>
         <a 
           href="mailto:shrutisingh2680@gmail.com"
-          className={`relative z-[100] p-2 transition-all duration-300 text-[#475569] hover:text-[#C2410C] cursor-pointer flex items-center justify-center`}
+          title="Send me an email"
+          className={`relative z-[100] p-2 transition-all duration-300 text-[#475569] hover:text-[#C2410C] cursor-pointer flex items-center justify-center pointer-events-auto`}
         >
           <Mail size={20} />
         </a>

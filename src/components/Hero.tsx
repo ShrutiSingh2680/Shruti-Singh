@@ -42,16 +42,15 @@ export default function Hero() {
           </div>
         </div>
         
-        <div className="mt-12 group cursor-pointer">
+        <div className="mt-12 group cursor-pointer relative z-30">
           <a 
-            href="/Shruti_Singh_-1.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-4 border-b-2 border-[#0F172A] pb-2 font-black text-xs uppercase tracking-widest text-[#0F172A] hover:text-[#C2410C] hover:border-[#C2410C] transition-all group"
+            href="./resume.pdf" 
+            download="Shruti_Singh_Resume.pdf"
+            className="inline-flex items-center space-x-4 border-b-2 border-[#0F172A] pb-2 font-black text-xs uppercase tracking-widest text-[#0F172A] hover:text-[#C2410C] hover:border-[#C2410C] transition-all group pointer-events-auto"
           >
-            <FileText size={14} className="group-hover:rotate-12 transition-transform" />
+            <FileText size={14} className="group-hover:rotate-12 transition-transform shrink-0" />
             <span>Download Resume</span>
-            <ExternalLink size={12} className="opacity-50 group-hover:opacity-100 transition-opacity" />
+            <ExternalLink size={12} className="opacity-50 group-hover:opacity-100 transition-opacity shrink-0" />
           </a>
         </div>
       </div>

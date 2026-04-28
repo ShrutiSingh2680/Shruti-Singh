@@ -31,7 +31,8 @@ export default function Contact() {
             </a>
             <a 
               href="mailto:shrutisingh2680@gmail.com" 
-              className="relative z-10 font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit cursor-pointer flex items-center"
+              title="Send me an email"
+              className="relative z-10 font-serif text-3xl text-[#0f172a] hover:italic hover:text-[#064E3B] transition-all w-fit cursor-pointer flex items-center pointer-events-auto"
             >
               Email
             </a>

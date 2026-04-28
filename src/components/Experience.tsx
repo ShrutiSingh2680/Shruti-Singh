@@ -33,15 +33,15 @@ const skills = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-[#f8fafc] geometric-border md:grid md:grid-cols-2">
-      <div className="p-8 md:p-16 border-b md:border-b-0 md:border-r border-[#0f172a] flex flex-col">
-        <h2 className="text-[10px] uppercase font-black tracking-[0.4em] text-[#C2410C] mb-12 flex items-center">
+    <section id="experience" className="bg-[#f8fafc] geometric-border md:grid md:grid-cols-[1fr_1.5fr]">
+      <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-[#0f172a] flex flex-col">
+        <h2 className="text-[10px] uppercase font-black tracking-[0.4em] text-[#C2410C] mb-8 flex items-center">
           Experience
           <span className="w-12 h-[1px] bg-[#C2410C] ml-4" />
         </h2>
 
-        <div className="flex-grow space-y-16">
-          <div className="flex flex-col space-y-12">
+        <div className="flex-grow space-y-12">
+          <div className="flex flex-col space-y-10">
              {experiences.map((exp, index) => (
               <div key={exp.role + exp.company} className="relative">
                 <div className="text-[10px] font-bold text-[#475569] mb-2 tracking-widest uppercase">{exp.period}</div>
@@ -79,7 +79,7 @@ export default function Experience() {
         </div>
       </div>
 
-      <div className="p-8 md:p-16 flex flex-col bg-white text-[#0f172a] relative">
+      <div className="p-8 md:p-12 flex flex-col bg-white text-[#0f172a] relative">
         <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#FDE68A] rounded-full flex items-center justify-center text-[10px] font-black uppercase rotate-[-15deg] shadow-lg border-2 border-[#0F172A] z-10 transition-transform hover:rotate-0 cursor-default">
           Execution<br />Machine
         </div>

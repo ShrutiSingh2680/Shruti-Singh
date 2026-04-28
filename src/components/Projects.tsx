@@ -32,22 +32,19 @@ export default function Projects() {
               Projects, <br /><span className="italic">in motion.</span>
             </h2>
           </div>
-          <p className="text-[#64748B] max-w-xs text-sm font-medium leading-relaxed">
-            A curated case-study set is on the way. Snapshots below; deep-dives soon.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {personalProjects.map((project, index) => (
+        <div className="space-y-8">
+          {[personalProjects[0]].map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="group bg-white border border-[#E2E8F0] rounded-[40px] p-4 md:p-6 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              className="group bg-white border border-[#E2E8F0] rounded-[40px] p-4 md:p-8 hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col md:flex-row gap-8 md:gap-12 items-center"
             >
-              <div className={`relative aspect-[4/3] rounded-[32px] overflow-hidden ${project.color} mb-8`}>
+              <div className={`relative w-full md:w-1/2 aspect-[4/3] md:aspect-video rounded-[32px] overflow-hidden ${project.color} shrink-0`}>
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -58,26 +55,34 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="px-4 pb-4">
-                <div className="flex items-start justify-between mb-4">
+              <div className="flex-1 w-full">
+                <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h3 className="text-3xl font-serif text-[#0F172A] mb-1 group-hover:text-[#064E3B] transition-colors">
+                    <h3 className="text-4xl md:text-5xl font-serif text-[#0F172A] mb-2 group-hover:text-[#064E3B] transition-colors leading-[0.9]">
                       {project.title}
                     </h3>
-                    <p className="text-sm italic font-serif text-[#C2410C]">{project.tagline}</p>
+                    <p className="text-base italic font-serif text-[#C2410C]">{project.tagline}</p>
                   </div>
                   <a 
                     href={project.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full border border-[#E2E8F0] flex items-center justify-center hover:bg-[#0F172A] hover:text-white transition-all transform group-hover:rotate-[-45deg]"
+                    className="w-14 h-14 rounded-full border border-[#E2E8F0] flex items-center justify-center hover:bg-[#0F172A] hover:text-white transition-all transform group-hover:rotate-[-45deg] shrink-0"
                   >
-                    <ArrowRight size={20} />
+                    <ArrowRight size={24} />
                   </a>
                 </div>
-                <p className="text-[#64748B] text-sm leading-relaxed max-w-sm mb-6">
+                <p className="text-[#64748B] text-lg leading-relaxed mb-8 max-w-2xl">
                   {project.description}
                 </p>
+                
+                <div className="flex flex-wrap gap-3">
+                  {['Product Design', 'Visual Identity', 'AI Integration'].map(tag => (
+                    <span key={tag} className="px-5 py-2 rounded-full border border-slate-100 bg-slate-50/50 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
