@@ -44,7 +44,7 @@ export default function Hero() {
         
         <div className="mt-12 group cursor-pointer relative z-30">
           <a 
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             download="Shruti_Singh_Resume.pdf"
             className="inline-flex items-center space-x-4 border-b-2 border-[#0F172A] pb-2 font-black text-xs uppercase tracking-widest text-[#0F172A] hover:text-[#C2410C] hover:border-[#C2410C] transition-all group pointer-events-auto"
           >
@@ -74,7 +74,7 @@ export default function Hero() {
             className="aspect-[3/4] rounded-[40px] border-2 border-[#0F172A] overflow-hidden bg-zinc-100 shadow-2xl group transition-all duration-500 hover:scale-[1.02]"
           >
             <img 
-              src="/profile.png" 
+              src={`${import.meta.env.BASE_URL}profile.png`} 
               alt="Shruti Singh" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               onError={(e) => {

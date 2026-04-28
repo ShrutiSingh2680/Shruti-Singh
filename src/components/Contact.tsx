@@ -3,7 +3,7 @@ import { Mail, ArrowRight } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-[#f8fafc] geometric-border md:grid md:grid-cols-2">
+    <section id="contact" className="bg-[#f8fafc] geometric-border md:grid md:grid-cols-2 scroll-mt-32">
       <div className="p-8 md:p-16 border-b md:border-b-0 md:border-r border-[#0f172a] flex flex-col justify-between min-h-[400px]">
         <div>
           <h2 className="text-[10px] uppercase font-black tracking-[0.4em] text-[#C2410C] mb-12 flex items-center">

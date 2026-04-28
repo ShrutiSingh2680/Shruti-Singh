@@ -24,7 +24,7 @@ const hobbies = [
 
 export default function Hobbies() {
   return (
-    <section id="hobbies" className="bg-[#0F172A] text-[#FDFCFB] geometric-border md:grid md:grid-cols-2 overflow-hidden">
+    <section id="hobbies" className="bg-[#0F172A] text-[#FDFCFB] geometric-border md:grid md:grid-cols-2 overflow-hidden scroll-mt-32">
       <div className="p-8 md:p-16 border-b md:border-b-0 md:border-r border-[#FDFCFB]/10 relative">
         <h2 className="text-[10px] uppercase font-black tracking-[0.4em] text-[#FDE68A] mb-12 flex items-center">
           The Human Component

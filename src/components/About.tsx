@@ -9,7 +9,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-[#FDFCFB] geometric-border md:grid md:grid-cols-2 relative overflow-hidden">
+    <section id="about" className="bg-[#FDFCFB] geometric-border md:grid md:grid-cols-2 relative overflow-hidden scroll-mt-32">
       <div className="p-8 md:p-16 border-b md:border-b-0 md:border-r border-[#0F172A] flex flex-col justify-between">
         <div>
           <h2 className="text-[10px] uppercase font-black tracking-[0.4em] text-[#C2410C] mb-12 flex items-center">

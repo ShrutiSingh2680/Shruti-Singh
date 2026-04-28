@@ -24,7 +24,7 @@ const personalProjects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-[#FDFCFB] py-24 px-6 md:px-12">
+    <section id="projects" className="bg-[#FDFCFB] py-24 px-6 md:px-12 scroll-mt-32">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 space-y-6 md:space-y-0">
           <div className="max-w-xl">

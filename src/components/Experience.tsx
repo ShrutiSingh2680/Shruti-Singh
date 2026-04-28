@@ -33,7 +33,7 @@ const skills = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-[#f8fafc] geometric-border md:grid md:grid-cols-[1fr_1.5fr]">
+    <section id="experience" className="bg-[#f8fafc] geometric-border md:grid md:grid-cols-[1fr_1.5fr] scroll-mt-32">
       <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-[#0f172a] flex flex-col">
         <h2 className="text-[10px] uppercase font-black tracking-[0.4em] text-[#C2410C] mb-8 flex items-center">
           Experience

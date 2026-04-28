@@ -8,49 +8,49 @@ const paintings = [
     title: "Abstract Textures I",
     year: "2023",
     description: "Oil on canvas. An exploration of tactile surfaces and depth through layering.",
-    image: "/art1.jpg",
+    image: `${import.meta.env.BASE_URL}art1.jpg`,
   },
   {
     id: 2,
     title: "Silent Whispers",
     year: "2023",
     description: "Mixed media. Minimalist organic forms meeting fluid charcoal strokes.",
-    image: "/art2.jpeg",
+    image: `${import.meta.env.BASE_URL}art2.jpeg`,
   },
   {
     id: 3,
     title: "Urban Rhythms",
     year: "2024",
     description: "A series focused on the kinetic energy and structural layering of city life.",
-    image: "/art3.jpeg",
+    image: `${import.meta.env.BASE_URL}art3.jpeg`,
   },
   {
     id: 4,
     title: "Ethereal Bloom",
     year: "2024",
     description: "Vibrant botanical abstractions captured in a moment of structured chaos.",
-    image: "/art4.jpeg",
+    image: `${import.meta.env.BASE_URL}art4.jpeg`,
   },
   {
     id: 5,
     title: "Verdant Dreams",
     year: "2024",
     description: "Landscape study exploring the deep greens and textures of the Western Ghats.",
-    image: "/art5.jpg",
+    image: `${import.meta.env.BASE_URL}art5.jpg`,
   },
   {
     id: 6,
     title: "Geometric Solace",
     year: "2024",
     description: "A dialogue between rigid lines and soft gradients in oil and pastels.",
-    image: "/art6.jpg",
+    image: `${import.meta.env.BASE_URL}art6.jpg`,
   },
   {
     id: 7,
     title: "Cerulean Depths",
     year: "2024",
     description: "Fluid studies of motion using heavy body acrylics and pouring techniques.",
-    image: "/art7.jpg",
+    image: `${import.meta.env.BASE_URL}art7.jpg`,
   },
 ];
 
@@ -58,7 +58,7 @@ export default function PaintingsGallery() {
   return (
     <div className="min-h-screen bg-[#FDFCFB] text-[#0F172A] selection:bg-[#C2410C] selection:text-white">
       {/* Header */}
-      <nav className="sticky top-0 z-50 bg-[#FDFCFB]/80 backdrop-blur-md border-b border-[#0F172A]/5 px-6 py-4 flex items-center justify-between">
+      <nav className="sticky top-0 z-50 bg-[#FDFCFB] border-b border-[#0F172A]/10 px-6 py-4 flex items-center justify-between">
         <Link 
           to="/" 
           className="flex items-center space-x-2 text-xs font-black uppercase tracking-widest hover:text-[#C2410C] transition-colors"
